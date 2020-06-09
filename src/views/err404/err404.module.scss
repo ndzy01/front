@@ -1,0 +1,11 @@
+.err404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+
+  .body {
+    font-size: 2rem;
+    color: red;
+  }
+}
