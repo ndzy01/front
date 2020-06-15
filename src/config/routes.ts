@@ -11,19 +11,38 @@ let routes: IRouteItem[] = [
     view: 'Edit',
   },
   {
-    path: '/add', // 添加页
+    path: '/add', 
     view: 'Add',
   },
-// ------------------------------------------------------------------------------------//
+  // ------------------------------------------------------------------------------------//
   {
-    path: '/scrollTable', // 添加页
-    view: 'scrollTable/index',
+    path: '/scrollTable',
+    components: 'scrollTable/index',
   },
- 
+  {
+    path: '/form01',
+    components: 'form/form01',
+  },
+  {
+    path: '/form02', 
+    components: 'form/form02',
+  },
+  {
+    path: '/popover', 
+    components: 'popover/index',
+  },
+  {
+    path: '/renderProps', 
+    components: 'renderProps/index',
+  },
+  {
+    path: '/nowTime', 
+    components: 'nowTime/nowTime',
+  },
 ];
 interface IRouteItem extends RouteProps {
   view?: string;
-  components?:string
+  components?: string;
 }
 
 for (const item of routes) {
@@ -31,7 +50,9 @@ for (const item of routes) {
     item.component = lazy(() => import(('../views/' + item.view) as string));
   }
   if (item.components) {
-    item.component = lazy(() => import(('../components/' + item.components) as string));
+    item.component = lazy(() =>
+      import(('../components/' + item.components) as string)
+    );
   }
 }
 

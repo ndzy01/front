@@ -473,6 +473,8 @@ module.exports = function (webpackEnv) {
                 options: {
                   resources: [
                     path.resolve(__dirname, '../src/styles/variable.scss'),
+                    path.resolve(__dirname, '../src/styles/function.scss'),
+                    path.resolve(__dirname, '../src/styles/mixin.scss'),
                   ],
                 },
               }),

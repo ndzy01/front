@@ -1,0 +1,22 @@
+/*文本格式化，超出范围，显示省略号*/
+@mixin text-overflow($width: 100%, $display: block) {
+  width: $width;
+  display: $display;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 清除浮动 */
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+  }
+  *height: 1%;
+}

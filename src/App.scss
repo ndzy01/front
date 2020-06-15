@@ -2,10 +2,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  &-margin10{
+  &-margin10 {
     margin: 0 10px;
   }
-  &-header{
+  &-header {
     min-height: 60px;
     display: flex;
     align-items: center;
@@ -14,15 +14,15 @@
     max-width: 100%;
     background: #fff;
     box-shadow: 0 2px 8px #f0f1f2;
-    &-body{
+    &-body {
       display: flex;
       width: 100%;
-      &-logo{
+      &-logo {
         display: inline-block;
         height: 60px;
-         width: 60px; 
-         padding: 5px;
-        line-height:50px;
+        width: 60px;
+        padding: 5px;
+        line-height: 50px;
         box-sizing: border-box;
       }
     }
@@ -40,20 +40,20 @@
     min-height: 300px;
     flex: auto;
     display: flex;
-    &-aside-expend{
+    @include clearfix();
+    &-aside-expend {
       padding: 5px;
       flex: none;
       width: 200px;
       border-right: 2px dotted pink;
       overflow-y: auto;
     }
-    &-aside-collapse{
+    &-aside-collapse {
       display: none;
       // flex: none;
       // width: 0px;
-   
     }
- 
+
     &-main {
       min-height: 300px;
       flex: auto;

@@ -1,4 +1,5 @@
 yarn add sass-resources-loader -D
+npm install sass-resources-loader -D
 yarn add node-sass
 
 ```js
