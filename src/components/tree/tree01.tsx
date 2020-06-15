@@ -1,8 +1,8 @@
 import React, { useState ,useEffect} from 'react'
 import { Tree } from 'antd'
-import store  from '../mobx/store'
-import api from '../http'
-import listToTree from '../utils/listToTree'
+import store  from '../../mobx/store'
+import api from '../../http'
+import listToTree from '../../utils/listToTree'
 
 const { DirectoryTree } = Tree;
 

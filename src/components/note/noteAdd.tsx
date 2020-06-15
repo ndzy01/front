@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useObserver } from "mobx-react-lite";
-import store from "../mobx/store";
+import store from "../../mobx/store";
 import { Table, Form, Input, Button, message } from "antd";
 
-import api from "../http";
+import api from "../../http";
 
 function TreeTable(props: any) {
   const [datas, setDatas] = useState<any>([]);
@@ -106,7 +106,7 @@ function AddForm(props: any) {
     </div>
   );
 }
-const Add = () => {
+const noteAdd = () => {
   return useObserver(() => (<div className="add">
     <div style={{ margin: "10px" }}>
       <TreeTable sid={store.getSId()}/>
@@ -128,4 +128,4 @@ const Add = () => {
   </div>))
 } 
 
-export default Add;
+export default noteAdd;

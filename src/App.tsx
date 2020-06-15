@@ -13,7 +13,6 @@ import hooks from './hooks';
 import api from './http';
 
 import Err404 from './views/err404/Err404';
-import TreeShow from './components/tree';
 import './App.scss';
 const history = createHashHistory();
 
@@ -49,38 +48,6 @@ function App() {
                     {isExpend ? '收起' : '展开'}
                   </Button>
                 </div>
-                <div
-                  style={{
-                    flex: 'auto',
-                    lineHeight: '60px',
-                    textAlign: 'center',
-                  }}
-                >
-                  <Button
-                    className="app-margin10"
-                    onClick={() => {
-                      history.push('/home');
-                    }}
-                  >
-                    主页
-                  </Button>
-                  <Button
-                    className="app-margin10"
-                    onClick={() => {
-                      history.push('/add');
-                    }}
-                  >
-                    添加
-                  </Button>
-                  <Button
-                    className="app-margin10"
-                    onClick={() => {
-                      history.push('/edit');
-                    }}
-                  >
-                    编辑
-                  </Button>
-                </div>
               </div>
             </header>
             <div className="app-body">
@@ -89,7 +56,17 @@ function App() {
                   isExpend ? 'app-body-aside-expend' : 'app-body-aside-collapse'
                 }
               >
-                <TreeShow />
+                <ul>
+                  {config.routers.map((item: any) => {
+                    return (
+                      <li>
+                        <a onClick={() => history.push(item.path)}>
+                          {item.view ? item.view : item.components}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
               </aside>
               <div className="app-body-main">
                 <div className="app-body-main-content">

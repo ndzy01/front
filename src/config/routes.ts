@@ -6,37 +6,50 @@ let routes: IRouteItem[] = [
     path: '/home', // 主页
     view: 'Home',
   },
+  // -------------------------------------------------------
+  // note
   {
-    path: '/edit', // 编辑页
-    view: 'Edit',
+    path: '/noteTree',
+    components: 'note/noteTree',
   },
   {
-    path: '/add', 
-    view: 'Add',
+    path: '/noteShow',
+    components: 'note/noteShow',
   },
-  // ------------------------------------------------------------------------------------//
   {
-    path: '/scrollTable',
-    components: 'scrollTable/index',
+    path: '/noteAdd',
+    components: 'note/noteAdd',
   },
+  {
+    path: '/noteEdit',
+    components: 'note/noteEdit',
+  },
+  {
+    path: '/tree01',
+    components: 'tree/tree01',
+  },
+  // {
+  //   path: '/scrollTable',
+  //   components: 'scrollTable/index',
+  // },
   {
     path: '/form01',
     components: 'form/form01',
   },
   {
-    path: '/form02', 
+    path: '/form02',
     components: 'form/form02',
   },
   {
-    path: '/popover', 
+    path: '/popover',
     components: 'popover/index',
   },
   {
-    path: '/renderProps', 
+    path: '/renderProps',
     components: 'renderProps/index',
   },
   {
-    path: '/nowTime', 
+    path: '/nowTime',
     components: 'nowTime/nowTime',
   },
 ];
