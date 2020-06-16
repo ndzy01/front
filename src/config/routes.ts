@@ -36,9 +36,13 @@ let routes: IRouteItem[] = [
     path: '/form01',
     components: 'form/form01',
   },
+  // {
+  //   path: '/form02',
+  //   components: 'form/form02',
+  // },
   {
-    path: '/form02',
-    components: 'form/form02',
+    path: '/form03',
+    components: 'form/form03',
   },
   {
     path: '/popover',
